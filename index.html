@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Minha página</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body onload="load()"> <!-- onload() chama a função quando o elemento é carregado, nesse caso o <body>-->
+        <button type="button" onclick="clicou()">Clique aqui</button>
+        <p id="agradecimento" onclick="redirecionar()"></p>
+        <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p> <!-- o (this) serve para a função agir no elemento html que está interagindo com o mouse, caso o elemento esteja usando a mesma função-->
+        <p id="mousemove2" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p> <!-- Na situação descrita no comentário acima, não precisa ter id, caso não queira -->
+        <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p> <!-- Exemplo sem id-->
+        <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p> <!-- Exemplo sem id -->
+        <select onchange="funcaoChange(this)"> <!-- onchange() sempre que troca o valor, coleta o valor que está sendo escolhido -->
+            <option value="1">Valor 1</option>
+            <option value="2">Valor 2</option>
+            <option value="3">Valor 3</option>
+        </select>
+    </body>
+</html>
